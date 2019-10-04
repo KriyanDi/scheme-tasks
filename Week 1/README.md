@@ -1,32 +1,32 @@
 # Първа седмица 
 ## Семинар - Функционално програмиране
 #### Процедури:
->(+ a b) 
-(- a b)
-(* a b)
-(remainder a b)
-(quotient a b)
-(modulo a b)
-(= a b)
-(> a b)
-(< a b)
-(>= a b)
-(<= a b)
-(not a)
-(and a1..an)
-(or a1..an)
+> (+ a b) 
+ (- a b)
+ (* a b)
+ (remainder a b)
+ (quotient a b)
+ (modulo a b)
+ (= a b)
+ (> a b)
+ (< a b)
+ (>= a b)
+ (<= a b)
+ (not a)
+ (and a1..an)
+ (or a1..an)
 #### Дефиниране на процедура
 (define (<name> <var>) (<body>))
 #### Ако - if
 >(if (<condition>)
-    (<if-true>)
-    (<if-false>))
+(<if-true>)
+(<if-false>))
 #### Условност - cond
 >(cond ((<condition-1>) (<condition-1-body>))
-      ((<condition-2>) (<condition-2-body>))
-      ...
-      ((<condition-n>) (<condition-n-body>))
-      (else (<default-body>)))
+((<condition-2>) (<condition-2-body>))
+...
+((<condition-n>) (<condition-n-body>))
+(else (<default-body>)))
 #### Полезни неща, записани по време на семинара
 * по отношение на писането на код:
 -допълнителните скоби създават проблеми
