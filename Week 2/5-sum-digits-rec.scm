@@ -1,0 +1,5 @@
+(define (sum-digits-rec n)
+    (if (> n 0)
+        (+ (remainder n 10) 
+           (sum-digits-rec (quotient n 10)))
+        0))

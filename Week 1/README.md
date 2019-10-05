@@ -4,9 +4,9 @@
 > (+ a b) 
  (- a b)
  (* a b)
- (remainder a b)
- (quotient a b)
- (modulo a b)
+ (remainder a b) - взима остатъка 123 10 -> 3
+ (quotient a b) - взима частно 123 10 -> 12
+ (modulo a b) - взима остатъка 123 10 -> 3
  (= a b)
  (> a b)
  (< a b)
