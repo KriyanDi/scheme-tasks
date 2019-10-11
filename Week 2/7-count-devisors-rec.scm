@@ -10,6 +10,6 @@
         ((= (remainder number counter) 0)
             (+ 1
                (count-devisor-rec-help (+ counter 1)
-                                        number)))
+                                          number)))
         (else (count-devisor-rec-help (+ counter 1)
-                                      number))))
+                                         number))))

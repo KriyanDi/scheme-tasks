@@ -12,4 +12,6 @@
                (sum-devisor-rec-help (+ counter 1)
                                         number)))
         (else (sum-devisor-rec-help (+ counter 1)
-                                      number))))
+                                       number))))
+        
+(sum-devisor-rec 10)

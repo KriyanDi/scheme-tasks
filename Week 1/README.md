@@ -19,7 +19,7 @@
 ```
 #### Дефиниране на процедура
 ```scheme
-(define (<name> <var>) (<body>))
+(define (<name> var) (<body>))
 ```
 #### Ако - if
 ```scheme
@@ -44,4 +44,3 @@
 * https://docs.racket-lang.org - документация
 * http://community.schemewiki.org/?scheme-style - стил на писане
 * https://repl.it - за писане на езика Scheme онлайн
-
