@@ -13,5 +13,3 @@
                                         number)))
         (else (sum-devisor-rec-help (+ counter 1)
                                        number))))
-        
-(sum-devisor-rec 10)
