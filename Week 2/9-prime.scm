@@ -12,6 +12,4 @@
                                      max-count))
     devisors)) 
 
-()
-
 (define (prime? n) (= (count-devisor-iter n) 2)
