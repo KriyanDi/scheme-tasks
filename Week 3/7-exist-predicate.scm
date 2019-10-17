@@ -1,5 +1,5 @@
 (define (exists? predicate a b)
-    (accumulate or #f predicate a b))
+    (accumulate (lambda (current next) (or current next)) #f predicate a b))
 
 (define (accumulate combine null-value term a b)
     (if (> a b)
