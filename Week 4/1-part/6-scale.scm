@@ -1,0 +1,10 @@
+(define (map func list)
+    (if (null? list)
+        '()
+        (cons (func (car list))
+              (map func (cdr list)))))
+
+(define (scale x list)
+    (map (lambda (x list)
+            (* x (car list)))
+         (list)))

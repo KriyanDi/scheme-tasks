@@ -1,0 +1,7 @@
+(define (filter term list)
+    (if (null? list)
+        '()
+        (if (term (car list))
+            (cons (car list) 
+                  (filter term (cdr list)))
+            (filter term (cdr list)))))
