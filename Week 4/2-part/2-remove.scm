@@ -1,0 +1,7 @@
+(define (remove list x)
+    (if (null? list)
+        '()
+        (if (= (car list) x)
+            (cdr list)
+            (cons (car list)
+                  (remove (cdr list) x)))))

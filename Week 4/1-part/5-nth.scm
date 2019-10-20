@@ -4,4 +4,6 @@
 (define (nth-help current n list)
     (if (= current n)
         (car list)
-        (nth-help (+ current 1) n (cdr list))))
+        (nth-help (+ current 1) 
+                  n 
+                  (cdr list))))

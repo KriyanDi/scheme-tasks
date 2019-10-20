@@ -1,0 +1,13 @@
+(define (filter term list)
+    (if (null? list)
+        '()
+        (if (term (car list))
+            (cons (car list) 
+                  (filter term (cdr list)))
+            (filter term (cdr list)))))
+
+(define (partition p? list)
+    (cons (filter p? list)
+          (cons (filter (lambda (x) (not (p? x)))
+                        list)
+                '())))
