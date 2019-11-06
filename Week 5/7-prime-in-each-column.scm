@@ -22,19 +22,19 @@
 
 ;--- --- ---
 
-;for-all-columns for matrices with at least one element
-(define (for-all-columns matrix p?)
-    (for-all-columns-help matrix p? 1))
+;for-each-column for matrices with at least one element
+(define (for-each-columns matrix p?)
+    (for-each-columns-help matrix p? 1))
 
-;for-all-columns-help
-(define (for-all-columns-help matrix p? n)
+;for-each-columns-help
+(define (for-each-columns-help matrix p? n)
     (if (< (count-cols matrix) n) #t
         (and (for-single-column (nth-column matrix n) p?)
-             (for-all-columns-help matrix p? (+ 1 n)))))
+             (for-each-columns-help matrix p? (+ 1 n)))))
 
 ;for-single-column
 (define (for-single-column list p?)
-    (if (null? list) #t
-        (and (p? (car list))
+    (if (null? list) #f
+        (or (p? (car list))
              (for-single-column (cdr list)
                                 p?))))
