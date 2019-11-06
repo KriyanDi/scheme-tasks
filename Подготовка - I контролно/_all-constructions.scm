@@ -41,3 +41,6 @@
           (else (op (deep-foldr nv term op (car list)) ;вертикална стъпка - обхождане на главата на list
                     (deep-foldr nv term op (cdr list)))))) ;вертикална стъпка - обхождане на опашката на list
 
+;Помощна функция, обратна на cons
+(define snoc (lambda (x list) (append list (list x))))
+
