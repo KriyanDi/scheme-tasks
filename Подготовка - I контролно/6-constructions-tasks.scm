@@ -11,8 +11,7 @@
 
 ;Прилага операция върху всеки елемент от списъка
 (define (map func list)
-   (if (null? list) '()
-       (cons (func (car list)) (map func (cdr list)))))
+    (cons (func (car list)) (map func (cdr list))))
 
 ;Филтрира елементите на списък
 (define (filter p? list)
@@ -40,9 +39,21 @@
     (cond ((null? list) nv) ;хоризонтално дъно - достигане до празен списък
           ((atom? list) (term list)) ;вертикално дъно - достигане до атом
           (else (op (deep-fold nv term op (car list)) ;вертикална стъпка - обхождане на главата на list
-                    (deep-foldr nv term op (cdr list)))))) ;вертикална стъпка - обхождане на опашката на list
+                    (deep-fold nv term op (cdr list)))))) ;вертикална стъпка - обхождане на опашката на list
 
 ;Помощна функция, обратна на cons
-(define snoc (lambda (x list) (append list (list x))))
+(define snoc (lambda (x l) (append l (list x))))
 
 ;------------------------------------------------------------------------------------------------------------
+
+;count-atoms
+(define (count-atoms l)
+  (deep-fold 0 (lambda (x) 1) + l))
+
+;flatten
+(define (flatten l)
+  (deep-fold `() list append l))
+
+;deep-reverse
+(define (deep-reverse l)
+  (deep-fold '() (lambda (x) x) snoc l))
