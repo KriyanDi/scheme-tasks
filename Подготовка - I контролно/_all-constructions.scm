@@ -17,10 +17,10 @@
 ;Филтрира елементите на списък
 (define (filter p? list)
     (cond ((null? list) list)
-          ((p? (car list)) (cons (car list) (filter p? (cdr lsit))))
+          ((p? (car list)) (cons (car list) (filter p? (cdr list))))
           (else (filter p? (cdr list)))))
 
-;Дясно натрупване - a1 @ (a2) @ (... @ (an @ nv)...)) 
+;Дясно натрупване - a1 @ (a2 @ (... @ (an @ nv)...)) 
 (define (foldr op nv list)
     (if (null? list) nv
         (op (car list) (foldr op nv (cdr list)))))

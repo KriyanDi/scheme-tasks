@@ -5,11 +5,6 @@
     (if (null? l) #t
         (and (p? (car l)) (for-all? p? (cdr l)))))
 
-;проверява, дали предикат е изпълнен за някой елемент от списъка
-(define (for-each? p? l)
-    (if (null? l) #f
-        (or (p? (car l)) (for-all> p? (cdr l)))))
-
 ;член на списък
 (define (is-member? x l)
     (if (null? l) #f

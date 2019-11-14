@@ -20,9 +20,7 @@
 
 ;remove-dublicates-help
 (define (remove-dublicates-help src new)
-    (if (null? src)
-        new
+    (if (null? src) new
         (if (member (car src) new)
             (remove-dublicates-help (cdr src) new)
-            (remove-dublicates-help (cdr src)
-                                    (append new (list (car src)))))))
+            (remove-dublicates-help (cdr src) (append new (list (car src)))))))
